@@ -1,12 +1,12 @@
 resource "kestra_namespace" "example" {
-  namespace_id  = "io.kestra.mynamespace"
+  namespace_id  = "company.team"
   description   = "Friendly description"
   variables     = <<EOT
 k1: 1
 k2:
     v1: 1
 EOT
-  task_defaults = <<EOT
+  plugin_defaults = <<EOT
 - type: io.kestra.core.tasks.log.Log
   values:
     message: first {{flow.id}}

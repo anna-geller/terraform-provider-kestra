@@ -29,7 +29,7 @@ func dataSourceNamespace() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
-			"task_defaults": {
+			"plugin_defaults": {
 				Description: "The namespace task defaults.",
 				Type:        schema.TypeString,
 				Computed:    true,

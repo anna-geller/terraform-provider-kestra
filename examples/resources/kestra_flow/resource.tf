@@ -1,5 +1,5 @@
 resource "kestra_flow" "example" {
-  namespace = "io.kestra.mynamespace"
+  namespace = "company.team"
   flow_id   = "my-flow"
   content   = <<EOT
 inputs:
@@ -15,7 +15,7 @@ tasks:
     message: first {{task.id}}
     level: TRACE
 
-taskDefaults:
+pluginDefaults:
   - type: io.kestra.core.tasks.log.Log
     values:
       message: third {{flow.id}}
